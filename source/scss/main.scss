@@ -2,4 +2,149 @@
 
 body {
   background-color: white;
+  padding: 5% 4% 0 8%;
+}
+
+h1 {
+  font: normal normal 50px/64px "Georgia";
+  color: #777;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  opacity: 0;
+  transition: all ease-out 750ms;
+
+  &[data-line="1"] {
+    transform: perspective(520px) rotateX(-7.5deg) rotateY(-1.9deg) translateX(-1.7%);
+    transition-delay: 500ms
+  }
+  &[data-line="2"] {
+    transform: perspective(520px) rotateX(-7.5deg) rotateY(-1.9deg) translateX(-1.7%);
+    transition-delay: 1000ms
+  }
+  &[data-line="3"] {
+    transform: perspective(520px) rotateX(-7.5deg) rotateY(-1.9deg) translateX(-1.7%);
+    transition-delay: 1500ms
+  }
+  &[data-line="4"] {
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+    transition-delay: 2000ms
+  }
+
+  span, a {
+    color: #222;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+
+    }
+  }
+
+  .l & {
+    opacity: 1;
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateX(0);    
+  }
+}
+
+nav {
+  margin-top: 15px;
+  width: 390px;
+  height: 49px;
+  overflow: hidden;
+
+  a {
+    position: relative;
+    width: 49px;
+    height: 49px;
+    display: inline-block;
+    margin-right: 35px;
+    opacity: 0;
+    transition: all ease-in 600ms;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .i, .h {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transition: all ease-out 600ms;
+    }
+
+    .i {
+      opacity: 1;
+    }
+    .h {
+      opacity: 0;
+    }
+
+    &:hover {
+      .i {
+        opacity: 0;
+      }
+      .h {
+        opacity: 1;
+      }
+    }
+
+    &.github {
+      transition-delay: 2.5s;
+
+      .i {
+        background: url(../images/github.svg) no-repeat center center;
+      }
+      .h {
+        background: url(../images/github-hover.svg) no-repeat center center;
+      }      
+    }
+    &.codepen {
+      transition-delay: 3s;
+
+      .i {
+        background: url(../images/codepen.svg) no-repeat center center;
+      }
+      .h {
+        background: url(../images/codepen-hover.svg) no-repeat center center;
+      }
+    }
+    &.linkedin {
+      transition-delay: 3.5s;
+      
+      .i {
+        background: url(../images/linkedin.svg) no-repeat center center;
+      }
+      .h {
+        background: url(../images/linkedin-hover.svg) no-repeat center center;
+      }
+    }
+    &.mail {
+      transition-delay: 4s;
+      
+      .i {
+        background: url(../images/gmail.svg) no-repeat center center;
+      }
+      .h {
+        background: url(../images/gmail-hover.svg) no-repeat center center;
+      }
+    }
+    &.wordpress {
+      transition-delay: 4.5s;
+      
+      .i {
+        background: url(../images/wordpress.svg) no-repeat center center;
+      }
+      .h {
+        background: url(../images/wordpress-hover.svg) no-repeat center center;
+      }
+    }
+
+    .l & {
+      opacity: 1;
+    }
+  }
 }

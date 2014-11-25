@@ -31,6 +31,12 @@ gulp.task('gulpTraceurCmdline',function() {
     }))
 });
 
+gulp.task('traceur', function () {
+    return gulp.src('./source/js/main.js')
+        .pipe(traceur({modules: "inline"}))
+        .pipe(gulp.dest('./dist/js/'));
+});
+
 gulp.task('slim2html', function(){
   gulp.src("./source/slim/*.slim")
     .pipe(slim({

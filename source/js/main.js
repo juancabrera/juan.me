@@ -1,7 +1,7 @@
-// main
+import {siteLoader} from './loader';
 
-import {moduleTest} from './module';
+var sl = new siteLoader();
 
-var test = new moduleTest();
-
-test.init();
+document.addEventListener("DOMContentLoaded", function() {
+  sl.init();
+}, false);

@@ -1,20 +1,25 @@
-var $___46__46__47__46__46__47_source_47_js_47_module__ = (function() {
+var $___46__46__47__46__46__47_source_47_js_47_loader__ = (function() {
   "use strict";
-  var __moduleName = "../../source/js/module";
-  function moduleTest() {
+  var __moduleName = "../../source/js/loader";
+  function siteLoader() {
     this.init = function() {
-      console.log("IE6 module test");
+      var b = document.querySelector("body");
+      window.setTimeout(function() {
+        b.className += " l";
+      }, 200);
     };
   }
-  return {get moduleTest() {
-      return moduleTest;
+  return {get siteLoader() {
+      return siteLoader;
     }};
 })();
 var $___46__46__47__46__46__47_source_47_js_47_main__ = (function() {
   "use strict";
   var __moduleName = "../../source/js/main";
-  var moduleTest = ($___46__46__47__46__46__47_source_47_js_47_module__).moduleTest;
-  var test = new moduleTest();
-  test.init();
+  var siteLoader = ($___46__46__47__46__46__47_source_47_js_47_loader__).siteLoader;
+  var sl = new siteLoader();
+  document.addEventListener("DOMContentLoaded", function() {
+    sl.init();
+  }, false);
   return {};
 })();
