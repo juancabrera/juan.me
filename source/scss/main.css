@@ -431,31 +431,31 @@ nav {
     nav a:hover .h {
       opacity: 1; }
     nav a.github {
-      transition-delay: 2.5s; }
+      transition-delay: 2s; }
       nav a.github .i {
         background: url(../images/github.svg) no-repeat center center; }
       nav a.github .h {
         background: url(../images/github-hover.svg) no-repeat center center; }
     nav a.codepen {
-      transition-delay: 3s; }
+      transition-delay: 2.5s; }
       nav a.codepen .i {
         background: url(../images/codepen.svg) no-repeat center center; }
       nav a.codepen .h {
         background: url(../images/codepen-hover.svg) no-repeat center center; }
     nav a.linkedin {
-      transition-delay: 3.5s; }
+      transition-delay: 3s; }
       nav a.linkedin .i {
         background: url(../images/linkedin.svg) no-repeat center center; }
       nav a.linkedin .h {
         background: url(../images/linkedin-hover.svg) no-repeat center center; }
     nav a.mail {
-      transition-delay: 4s; }
+      transition-delay: 3.5s; }
       nav a.mail .i {
         background: url(../images/gmail.svg) no-repeat center center; }
       nav a.mail .h {
         background: url(../images/gmail-hover.svg) no-repeat center center; }
     nav a.wordpress {
-      transition-delay: 4.5s; }
+      transition-delay: 4s; }
       nav a.wordpress .i {
         background: url(../images/wordpress.svg) no-repeat center center; }
       nav a.wordpress .h {

@@ -375,28 +375,23 @@ h1 {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   opacity: 0;
-  -webkit-transition: all ease-out 750ms;
-          transition: all ease-out 750ms; }
+  transition: all ease-out 750ms; }
   h1[data-line="1"] {
     -webkit-transform: perspective(520px) rotateX(-7.5deg) rotateY(-1.9deg) translateX(-1.7%);
             transform: perspective(520px) rotateX(-7.5deg) rotateY(-1.9deg) translateX(-1.7%);
-    -webkit-transition-delay: 500ms;
-            transition-delay: 500ms; }
+    transition-delay: 500ms; }
   h1[data-line="2"] {
     -webkit-transform: perspective(520px) rotateX(-7.5deg) rotateY(-1.9deg) translateX(-1.7%);
             transform: perspective(520px) rotateX(-7.5deg) rotateY(-1.9deg) translateX(-1.7%);
-    -webkit-transition-delay: 1000ms;
-            transition-delay: 1000ms; }
+    transition-delay: 1000ms; }
   h1[data-line="3"] {
     -webkit-transform: perspective(520px) rotateX(-7.5deg) rotateY(-1.9deg) translateX(-1.7%);
             transform: perspective(520px) rotateX(-7.5deg) rotateY(-1.9deg) translateX(-1.7%);
-    -webkit-transition-delay: 1500ms;
-            transition-delay: 1500ms; }
+    transition-delay: 1500ms; }
   h1[data-line="4"] {
     -webkit-transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
             transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
-    -webkit-transition-delay: 2000ms;
-            transition-delay: 2000ms; }
+    transition-delay: 2000ms; }
   h1 span, h1 a {
     color: #222; }
   h1 a {
@@ -418,8 +413,7 @@ nav {
     display: inline-block;
     margin-right: 35px;
     opacity: 0;
-    -webkit-transition: all ease-in 600ms;
-            transition: all ease-in 600ms; }
+    transition: all ease-in 600ms; }
     nav a:last-child {
       margin-right: 0; }
     nav a .i, nav a .h {
@@ -428,8 +422,7 @@ nav {
       left: 0;
       right: 0;
       bottom: 0;
-      -webkit-transition: all ease-out 600ms;
-              transition: all ease-out 600ms; }
+      transition: all ease-out 600ms; }
     nav a .i {
       opacity: 1; }
     nav a .h {
@@ -439,36 +432,31 @@ nav {
     nav a:hover .h {
       opacity: 1; }
     nav a.github {
-      -webkit-transition-delay: 2.5s;
-              transition-delay: 2.5s; }
+      transition-delay: 2.5s; }
       nav a.github .i {
         background: url(../images/github.svg) no-repeat center center; }
       nav a.github .h {
         background: url(../images/github-hover.svg) no-repeat center center; }
     nav a.codepen {
-      -webkit-transition-delay: 3s;
-              transition-delay: 3s; }
+      transition-delay: 3s; }
       nav a.codepen .i {
         background: url(../images/codepen.svg) no-repeat center center; }
       nav a.codepen .h {
         background: url(../images/codepen-hover.svg) no-repeat center center; }
     nav a.linkedin {
-      -webkit-transition-delay: 3.5s;
-              transition-delay: 3.5s; }
+      transition-delay: 3.5s; }
       nav a.linkedin .i {
         background: url(../images/linkedin.svg) no-repeat center center; }
       nav a.linkedin .h {
         background: url(../images/linkedin-hover.svg) no-repeat center center; }
     nav a.mail {
-      -webkit-transition-delay: 4s;
-              transition-delay: 4s; }
+      transition-delay: 4s; }
       nav a.mail .i {
         background: url(../images/gmail.svg) no-repeat center center; }
       nav a.mail .h {
         background: url(../images/gmail-hover.svg) no-repeat center center; }
     nav a.wordpress {
-      -webkit-transition-delay: 4.5s;
-              transition-delay: 4.5s; }
+      transition-delay: 4.5s; }
       nav a.wordpress .i {
         background: url(../images/wordpress.svg) no-repeat center center; }
       nav a.wordpress .h {

@@ -93,7 +93,7 @@ nav {
     }
 
     &.github {
-      transition-delay: 2.5s;
+      transition-delay: 2s;
 
       .i {
         background: url(../images/github.svg) no-repeat center center;
@@ -103,7 +103,7 @@ nav {
       }      
     }
     &.codepen {
-      transition-delay: 3s;
+      transition-delay: 2.5s;
 
       .i {
         background: url(../images/codepen.svg) no-repeat center center;
@@ -113,7 +113,7 @@ nav {
       }
     }
     &.linkedin {
-      transition-delay: 3.5s;
+      transition-delay: 3s;
       
       .i {
         background: url(../images/linkedin.svg) no-repeat center center;
@@ -123,7 +123,7 @@ nav {
       }
     }
     &.mail {
-      transition-delay: 4s;
+      transition-delay: 3.5s;
       
       .i {
         background: url(../images/gmail.svg) no-repeat center center;
@@ -133,7 +133,7 @@ nav {
       }
     }
     &.wordpress {
-      transition-delay: 4.5s;
+      transition-delay: 4s;
       
       .i {
         background: url(../images/wordpress.svg) no-repeat center center;
