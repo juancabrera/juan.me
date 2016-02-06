@@ -1,12 +1,14 @@
 'use strict';
 
 var
-  gulp               = require('gulp'),
-  sass               = require('gulp-ruby-sass'),
-  prefix             = require('gulp-autoprefixer'),
-  gulpTraceurCmdline = require('gulp-traceur-cmdline'),
-  slim               = require("gulp-slim"), 
-  connect            = require('gulp-connect')
+  fs         = require('fs'),
+  gulp       = require('gulp'),
+  sass       = require('gulp-ruby-sass'),
+  prefix     = require('gulp-autoprefixer'),
+  slim       = require("gulp-slim"), 
+  connect    = require('gulp-connect'),
+  browserify = require("browserify"),
+  babelify   = require("babelify")
 ;
 
 gulp.task('scss2css', function() {
@@ -22,13 +24,12 @@ gulp.task('autoprefixer', function() {
     .pipe(gulp.dest('./dist/css'));
 });
 
-gulp.task('gulpTraceurCmdline',function() {
-  gulp.src("./source/js/main.js")
-    .pipe(gulpTraceurCmdline('/usr/local/bin/traceur', {
-      modules : 'inline',
-      out     : './dist/js/main.js',
-      debug   : false
-    }))
+gulp.task('babelify', function() {
+  browserify('./source/js/main.js', { debug: false, sourceType: 'module' })
+    .transform(babelify)
+    .bundle()
+    .on("error", function (err) { console.log("Error : " + err.message); })
+    .pipe(fs.createWriteStream("./dist/js/main.js"));
 });
 
 gulp.task('traceur', function () {
@@ -51,7 +52,7 @@ gulp.task('connect', function() {
 
 gulp.task('watch', function() {
   gulp.watch('./source/scss/*.scss', ['scss2css', 'autoprefixer']);
-  gulp.watch('./source/js/*.js', ['gulpTraceurCmdline']);
+  gulp.watch('./source/js/*.js', ['babelify']);
   gulp.watch('./source/slim/*.slim', ['slim2html']);
 });
 

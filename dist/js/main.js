@@ -1,25 +1,32 @@
-var $___46__46__47__46__46__47_source_47_js_47_loader__ = (function() {
-  "use strict";
-  var __moduleName = "../../source/js/loader";
-  function siteLoader() {
-    this.init = function() {
-      var b = document.querySelector("body");
-      window.setTimeout(function() {
-        b.className += " l";
-      }, 200);
-    };
-  }
-  return {get siteLoader() {
-      return siteLoader;
-    }};
-})();
-var $___46__46__47__46__46__47_source_47_js_47_main__ = (function() {
-  "use strict";
-  var __moduleName = "../../source/js/main";
-  var siteLoader = ($___46__46__47__46__46__47_source_47_js_47_loader__).siteLoader;
-  var sl = new siteLoader();
-  document.addEventListener("DOMContentLoaded", function() {
-    sl.init();
-  }, false);
-  return {};
-})();
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+// site loader
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.siteLoader = siteLoader;
+
+function siteLoader() {
+  this.init = function () {
+    var b = document.querySelector("body");
+
+    window.setTimeout(function () {
+      b.className += " l";
+    }, 200);
+  };
+}
+
+},{}],2:[function(require,module,exports){
+"use strict";
+
+var _loader = require('./loader');
+
+var sl = new _loader.siteLoader();
+
+document.addEventListener("DOMContentLoaded", function () {
+  sl.init();
+}, false);
+
+},{"./loader":1}]},{},[2]);
