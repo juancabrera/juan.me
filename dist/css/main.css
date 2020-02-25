@@ -1,33 +1,35 @@
 body {
-  background-color: white;
-  padding: 5% 4% 0 8%; }
+  background-color: #2a2b2a;
+  padding: 5% 8% 0 8%; }
 
-h1 {
-  font: normal normal 50px/64px "Georgia";
-  color: #777;
+.container {
+  max-width: 530px; }
+
+p {
+  font-family: Roboto Mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.01em;
+  color: #f8f4e3;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  opacity: 0;
+  opacity: 1;
   transition: all ease-out 750ms; }
-  h1[data-line="1"] {
-    transform: perspective(520px) rotateX(-7.5deg) rotateY(-1.9deg) translateX(-1.7%);
-    transition-delay: 500ms; }
-  h1[data-line="2"] {
-    transform: perspective(520px) rotateX(-7.5deg) rotateY(-1.9deg) translateX(-1.7%);
-    transition-delay: 1000ms; }
-  h1[data-line="3"] {
-    transform: perspective(520px) rotateX(-7.5deg) rotateY(-1.9deg) translateX(-1.7%);
-    transition-delay: 1500ms; }
-  h1[data-line="4"] {
-    transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
-    transition-delay: 2000ms; }
-  h1 span, h1 a {
-    color: #222; }
-  h1 a {
-    text-decoration: none; }
-  .l h1 {
-    opacity: 1;
-    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateX(0); }
+  p.secondary {
+    font-size: 16px;
+    line-height: 28px; }
+  p span.wrapper .highlighted {
+    color: #ff8966; }
+  p span.wrapper .detail {
+    display: none;
+    color: #706c61; }
+  p span.wrapper:hover .detail {
+    display: inline; }
+
+a {
+  color: #ff8966; }
 
 nav {
   margin-top: 15px;
@@ -44,7 +46,8 @@ nav {
     transition: all ease-in 600ms; }
     nav a:last-child {
       margin-right: 0; }
-    nav a .i, nav a .h {
+    nav a .i,
+    nav a .h {
       position: absolute;
       top: 0;
       left: 0;
