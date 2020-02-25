@@ -1,50 +1,73 @@
 body {
-  background-color: white;
-  padding: 5% 4% 0 8%;
+  background-color: #2a2b2a;
+  padding: 5% 8% 0 8%;
 }
 
-h1 {
-  font: normal normal 50px/64px "Georgia";
-  color: #777;
+.container {
+  max-width: 530px;
+}
+
+p {
+  font-family: Roboto Mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.01em;
+  color: #f8f4e3;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  opacity: 0;
+  opacity: 1;
   transition: all ease-out 750ms;
 
-  &[data-line="1"] {
-    transform: perspective(520px) rotateX(-7.5deg) rotateY(-1.9deg) translateX(-1.7%);
-    transition-delay: 500ms
-  }
-  &[data-line="2"] {
-    transform: perspective(520px) rotateX(-7.5deg) rotateY(-1.9deg) translateX(-1.7%);
-    transition-delay: 1000ms
-  }
-  &[data-line="3"] {
-    transform: perspective(520px) rotateX(-7.5deg) rotateY(-1.9deg) translateX(-1.7%);
-    transition-delay: 1500ms
-  }
-  &[data-line="4"] {
-    transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
-    transition-delay: 2000ms
+  &.secondary {
+    font-size: 16px;
+    line-height: 28px;
   }
 
-  span, a {
-    color: #222;
-  }
-
-  a {
-    text-decoration: none;
+  span.wrapper {
+    .highlighted {
+      color: #ff8966;
+    }
+    .detail {
+      display: none;
+      color: #706c61;
+    }
 
     &:hover {
-
+      .detail {
+        display: inline;
+      }
     }
   }
-
-  .l & {
-    opacity: 1;
-    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateX(0);    
-  }
 }
+
+a {
+  color: #ff8966;
+}
+
+//   span.highlighted,
+//   a {
+//     color: #ff8966;
+//   }
+
+//   &:hover {
+//     display: none;
+//   }
+
+//   a {
+//     text-decoration: none;
+
+//     &:hover {
+//       text-decoration: underline;
+//     }
+//   }
+
+//   span.detail {
+//     color: #f8f4e3;
+//     display: none;
+//   }
+// }
 
 nav {
   margin-top: 15px;
@@ -65,7 +88,8 @@ nav {
       margin-right: 0;
     }
 
-    .i, .h {
+    .i,
+    .h {
       position: absolute;
       top: 0;
       left: 0;
@@ -98,7 +122,7 @@ nav {
       }
       .h {
         background: url(../images/github-hover.svg) no-repeat center center;
-      }      
+      }
     }
     &.codepen {
       transition-delay: 2.5s;
@@ -112,7 +136,7 @@ nav {
     }
     &.linkedin {
       transition-delay: 3s;
-      
+
       .i {
         background: url(../images/linkedin.svg) no-repeat center center;
       }
@@ -122,7 +146,7 @@ nav {
     }
     &.mail {
       transition-delay: 3.5s;
-      
+
       .i {
         background: url(../images/gmail.svg) no-repeat center center;
       }
@@ -132,7 +156,7 @@ nav {
     }
     &.wordpress {
       transition-delay: 4s;
-      
+
       .i {
         background: url(../images/wordpress.svg) no-repeat center center;
       }
